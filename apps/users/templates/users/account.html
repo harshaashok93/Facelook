@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block titles %}
+    {{ titles }}
+{%endblock %}
+
+{% block content %}
+    <h3> Welcome to {{ page }}</h3>
+    <p>
+        <a href="{% url 'card:create' %}">
+            <button>Create card</button>
+        </a>
+        <a href="{% url 'card:get' %}">
+            <button>My cards</button>
+        </a>
+    </p>
+{% endblock %}

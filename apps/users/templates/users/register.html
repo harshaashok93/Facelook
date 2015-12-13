@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block titles %}
+    {{ titles }}
+{%endblock %}
+
+{% block content %}
+    <h3> Welcome to {{ page }}</h3>
+    <p>
+        <a href="{% url 'user:account' %}">
+            <button>Account</button>
+        </a>
+    </p>
+    {% if wrong %}<p> {{ wrong }} </p>{% endif %}
+    <form method="POST" action="{% url 'user:register' %}" enctype="multipart/form-date">
+    {% csrf_token %}
+        <label>Username :<br><input type="text" name="username"/></label><br>
+        <label>First name :<br><input type="text" name="firstname"/></label><br>
+        <label>Last name :<br> <input type="text" name="lastname"/></label><br>
+        <label>Password :<br> <input type="password" name="password1"/></label><br>
+        <label>Password confirm :<br> <input type="password" name="password2"/></label><br>
+        <label>Email : <br><input type="email" name="email"/></label><br>
+        <label>Age : <br><input type="text" name="age"/></label><br>
+        <label>Profile picture : <br><input type="file" name="profile_picture"/></label><br><br>
+        <button>submit</button>
+    </form>
+{% endblock %}

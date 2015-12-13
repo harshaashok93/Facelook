@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block titles %}
+    {{ titles }}
+{%endblock %}
+
+{% block content %}
+    <h3> Welcome to {{ page }}</h3>
+    <p>
+        <a href="{% url 'user:account' %}">
+            <button>Account</button>
+        </a>
+    </p>
+{% endblock %}

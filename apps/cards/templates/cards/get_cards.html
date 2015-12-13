@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block titles %}
+    {{ titles }}
+{%endblock %}
+
+{% block content %}
+    <h3>{{ page }}</h3>
+    <p>
+        <a href="{% url 'card:view' %}">
+            <button>Card</button>
+        </a>
+    </p>
+{% endblock %}
