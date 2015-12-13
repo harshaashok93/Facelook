@@ -1,0 +1,11 @@
+Django==1.8.4
+Pillow==2.9.0
+django-ckeditor==4.5.1
+django-classy-tags==0.6.2
+django-sekizai==0.8.2
+django-treebeard==3.0
+djangocms-admin-style==0.2.8
+html5lib==0.999999
+ipdb==0.8.1
+psycopg2==2.6.1
+sqlparse==0.1.16
